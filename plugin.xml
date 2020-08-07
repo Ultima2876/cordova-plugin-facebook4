@@ -4,7 +4,7 @@
         id="fgl-cordova-plugin-facebook4"
         version="1.0.0">
 
-    <name>Facebook Connect</name>
+    <name>FGL Facebook SDK</name>
 
     <description>
       This is the official plugin for Facebook in Apache Cordova/PhoneGap!
@@ -13,7 +13,7 @@
       Cordova application as you use in your web application.
     </description>
 
-    <repo>https://github.com/jeduan/cordova-plugin-facebook4</repo>
+    <repo>https://github.com/ultima2876/cordova-plugin-facebook4</repo>
 
     <license>Apache 2.0</license>
 
