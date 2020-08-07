@@ -1,9 +1,9 @@
 {
-  "name": "cordova-plugin-facebook4",
-  "version": "6.4.0",
-  "description": "Cordova Facebook SDK 4 Plugin",
+  "name": "fgl-cordova-plugin-facebook4",
+  "version": "1.0.0",
+  "description": "FGL Cordova Facebook SDK 4 Plugin",
   "cordova": {
-    "id": "cordova-plugin-facebook4",
+    "id": "fgl-cordova-plugin-facebook4",
     "platforms": [
       "android",
       "ios",
@@ -12,18 +12,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jeduan/cordova-plugin-facebook4"
+    "url": "https://github.com/ultima2876/cordova-plugin-facebook4"
   },
   "keywords": [
-    "cordova",
-    "facebook",
-    "ecosystem:cordova",
-    "cordova-android",
-    "cordova-ios",
-    "cordova-browser",
-    "facebook-sdk",
-    "social",
-    "sharing"
   ],
   "license": "Apache-2.0"
 }
