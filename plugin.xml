@@ -94,71 +94,71 @@
             <access origin="https://api.facebook.com" />
             <access origin="https://*.fbcdn.net" />
             <access origin="https://*.akamaihd.net" />
+            
+            <config-file target="*-Info.plist" parent="FacebookAppID">
+                <string>$APP_ID</string>
+            </config-file>
+
+            <config-file target="*-Info.plist" parent="FacebookDisplayName">
+                <string>$APP_NAME</string>
+            </config-file>
+
+            <config-file target="*-Info.plist" parent="FacebookHybridAppEvents">
+                <string>$FACEBOOK_HYBRID_APP_EVENTS</string>
+            </config-file>
+
+            <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+              <array>
+                <dict>
+                  <key>CFBundleURLSchemes</key>
+                  <array>
+                    <string>fb$APP_ID</string>
+                  </array>
+                </dict>
+              </array>
+            </config-file>
+
+            <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
+              <dict>
+                <key>NSExceptionDomains</key>
+                <dict>
+                    <key>facebook.com</key>
+                    <dict>
+                        <key>NSIncludesSubdomains</key>
+                        <true/>
+                        <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                        <false/>
+                    </dict>
+                    <key>fbcdn.net</key>
+                    <dict>
+                        <key>NSIncludesSubdomains</key>
+                        <true/>
+                        <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                        <false/>
+                    </dict>
+                    <key>akamaihd.net</key>
+                    <dict>
+                        <key>NSIncludesSubdomains</key>
+                        <true/>
+                        <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                        <false/>
+                    </dict>
+                </dict>
+              </dict>
+            </config-file>
+
+            <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
+              <array>
+                <string>fbapi</string>
+                <string>fb-messenger-api</string>
+                <string>fbauth2</string>
+                <string>fbshareextension</string>
+              </array>
+            </config-file>
         </config-file>
 
         <header-file src="src/ios/FacebookConnectPlugin.h" />
         <source-file src="src/ios/FacebookConnectPlugin.m" />
-
-        <config-file target="*-Info.plist" parent="FacebookAppID">
-            <string>$APP_ID</string>
-        </config-file>
-
-        <config-file target="*-Info.plist" parent="FacebookDisplayName">
-            <string>$APP_NAME</string>
-        </config-file>
-
-        <config-file target="*-Info.plist" parent="FacebookHybridAppEvents">
-            <string>$FACEBOOK_HYBRID_APP_EVENTS</string>
-        </config-file>
-
-        <config-file target="*-Info.plist" parent="CFBundleURLTypes">
-          <array>
-            <dict>
-              <key>CFBundleURLSchemes</key>
-              <array>
-                <string>fb$APP_ID</string>
-              </array>
-            </dict>
-          </array>
-        </config-file>
-
-        <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
-          <dict>
-            <key>NSExceptionDomains</key>
-            <dict>
-                <key>facebook.com</key>
-                <dict>
-                    <key>NSIncludesSubdomains</key>
-                    <true/>
-                    <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-                    <false/>
-                </dict>
-                <key>fbcdn.net</key>
-                <dict>
-                    <key>NSIncludesSubdomains</key>
-                    <true/>
-                    <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-                    <false/>
-                </dict>
-                <key>akamaihd.net</key>
-                <dict>
-                    <key>NSIncludesSubdomains</key>
-                    <true/>
-                    <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-                    <false/>
-                </dict>
-            </dict>
-          </dict>
-        </config-file>
-
-        <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
-          <array>
-            <string>fbapi</string>
-            <string>fb-messenger-api</string>
-            <string>fbauth2</string>
-            <string>fbshareextension</string>
-          </array>
-        </config-file>
 
         <!-- Facebook SDK -->
         <podspec>
