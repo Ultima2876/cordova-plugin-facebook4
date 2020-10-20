@@ -59,6 +59,8 @@ public class ConnectPlugin extends CordovaPlugin {
     private static final int INVALID_ERROR_CODE = -2; //-1 is FacebookRequestError.INVALID_ERROR_CODE
     private static final String PUBLISH_PERMISSION_PREFIX = "publish";
     private static final String MANAGE_PERMISSION_PREFIX = "manage";
+    private static final String SYMBOL_CUSTOM_EVENT = "custom_event";
+    
     @SuppressWarnings("serial")
     private static final Set<String> OTHER_PUBLISH_PERMISSIONS = new HashSet<String>() {
         {
